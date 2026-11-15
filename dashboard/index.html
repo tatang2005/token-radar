@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Token Radar: pre-token protocols ranked by implied value</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <p class="eyebrow">TOKEN RADAR &middot; A LAUNCH WATCHLIST</p>
+    <h1>Pre-token protocols, ranked by what a launch would be worth</h1>
+    <p class="lede">Every protocol below records no token on DefiLlama. The board ranks them by an implied
+    value derived from the snapshot itself — TVL, seven-day growth, age with no token, and chain
+    coverage — and each row carries the concrete steps to farm it.</p>
+    <p class="meta" id="meta">Loading the board&hellip;</p>
+  </div>
+</header>
+<main class="wrap">
+  <section class="controls" aria-label="Board controls">
+    <label class="field">Search
+      <input id="q" type="search" placeholder="Protocol name or slug" autocomplete="off">
+    </label>
+    <label class="field">Category
+      <select id="category"><option value="all">All categories</option></select>
+    </label>
+    <label class="field">Chain
+      <select id="chain"><option value="all">All chains</option></select>
+    </label>
+    <div class="tabs" role="tablist" aria-label="Views">
+      <button id="tab-board" role="tab" aria-selected="true">Pre-token board</button>
+      <button id="tab-live" role="tab" aria-selected="false">Already has a token</button>
+    </div>
+  </section>
+  <section class="model" id="model" aria-label="How the value is modelled"></section>
+  <section id="detail" class="detail" hidden></section>
+  <section id="board" aria-live="polite"></section>
+  <p class="count" id="count"></p>
+</main>
+<footer class="wrap">
+  <p id="foot"></p>
+  <p class="fine">A protocol is listed as pre-token because DefiLlama records no token for it — that is
+  the record, not proof it has none. Implied value is this radar's own claim, not a prediction that a
+  token will be issued or what it will be worth. Farm steps are a plan, not investment advice; never pay
+  to claim an airdrop.</p>
+</footer>
+<script src="../data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
